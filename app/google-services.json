@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1063401287389",
+    "firebase_url": "https://crimemapper-26387.firebaseio.com",
+    "project_id": "crimemapper-26387",
+    "storage_bucket": "crimemapper-26387.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063401287389:android:e41c2b775572409117b534",
+        "android_client_info": {
+          "package_name": "com.techart.crimemapper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063401287389-413qv1juo85q1ai4f8sgleumhtefdej5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techart.crimemapper",
+            "certificate_hash": "27efa5967ddf40ca39defb31cdfe67904d60f14c"
+          }
+        },
+        {
+          "client_id": "1063401287389-toredofjean78eh35h9mslq5i7d4gc61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHR0f0GHq1We-CqnlCY5tfL9zEs0SJfuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063401287389-toredofjean78eh35h9mslq5i7d4gc61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

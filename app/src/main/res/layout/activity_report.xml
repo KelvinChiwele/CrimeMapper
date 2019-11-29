@@ -1,0 +1,109 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.techart.crimemapper.ReportActivity">
+
+    <Spinner
+        android:id="@+id/sp_issue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_border_background"
+        android:layout_marginTop="10dp"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/et_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/sp_issue"
+        android:padding="10dp"
+        android:background="@drawable/et_border_background"
+        android:maxLines="1"
+        android:inputType="textMultiLine"
+        android:hint="@string/occurence_place"/>
+
+    <EditText
+        android:id="@+id/et_particulars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_place"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/et_border_background"
+        android:maxLines="15"
+        android:inputType="textCapSentences|textMultiLine"
+        android:hint="@string/description"/>
+
+    <Button
+        android:id="@+id/bt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_particulars"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="46dp"
+        android:text="@string/pick_date"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/et_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_particulars"
+        android:layout_marginTop="49dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/et_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_particulars"
+        android:layout_marginTop="120dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_particulars"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/pick_time"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bt_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_time"
+        android:layout_marginTop="10dp"
+        android:text="@string/pick_location"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/bt_location"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_lng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_lat"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:visibility="gone"/>
+</RelativeLayout>
