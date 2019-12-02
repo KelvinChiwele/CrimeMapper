@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseAuth mAuth;
 
+    Query query;
+
     private RecyclerView rvCategory;
     private FloatingActionButton fab;
     FirestoreRecyclerAdapter firestoreRecyclerAdapter;
@@ -56,6 +58,9 @@ public class MainActivity extends AppCompatActivity
                 if (firebaseAuth.getCurrentUser()==null) {
                     Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(loginIntent);
+                } else {
+                    query = FireBaseUtils.db.collection(Constants.OCCURANCES_KEY).whereEqualTo(Constants.USER_URL, FireBaseUtils.getUiD());//.orderBy("createdAt",Query.Direction.ASCENDING);
+                    bindCategory(query);
                 }
             }
         };
@@ -74,8 +79,8 @@ public class MainActivity extends AppCompatActivity
         rvCategory.setLayoutManager( new LinearLayoutManager( this,
                 LinearLayoutManager.VERTICAL,
                 false ) );
-        Query query = FireBaseUtils.db.collection(Constants.OCCURANCES_KEY).whereEqualTo(Constants.USER_URL,FireBaseUtils.getUiD());//.orderBy("createdAt",Query.Direction.ASCENDING);
-        bindCategory(query);
+       /* Query query = FireBaseUtils.db.collection(Constants.OCCURANCES_KEY).whereEqualTo(Constants.USER_URL,FireBaseUtils.getUiD());//.orderBy("createdAt",Query.Direction.ASCENDING);
+        bindCategory(query);*/
 
         setupDrawer(toolbar);
     }

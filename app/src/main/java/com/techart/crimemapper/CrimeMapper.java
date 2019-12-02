@@ -3,6 +3,8 @@ package com.techart.crimemapper;
 import android.app.Application;
 import android.content.Context;
 
+import androidx.multidex.MultiDex;
+
 import com.firebase.client.Firebase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
@@ -24,8 +26,10 @@ public class CrimeMapper extends Application {
         db.setFirestoreSettings(settings);
         TypefaceUtil.overrideFonts(getApplicationContext());
     }
+
     @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
+    protected void attachBaseContext(Context context) {
+        super.attachBaseContext(context);
+        MultiDex.install(this);
     }
 }
